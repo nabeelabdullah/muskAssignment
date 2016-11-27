@@ -10,11 +10,66 @@ var REG_FOR_PAN = /^[A-Z0-9a-z]{10}$/;
 
 var REG_FOR_CNAME = /^[A-Z0-9a-z ]{2,50}$/;
 
+var REG_FOR_TIN = /^[A-Z0-9a-z ]{2,50}$/;
+
 var REG_FOR_DATE = /^(0[1-9]|1[0-2])\/(0[1-9]|1\d|2\d|3[01])\/(19|20)\d{2}$/;
 
 function bodyClick()
 {
     $(".mydropDown").hide();
+}
+
+function checkForPAN(Id)
+{
+
+    if (!REG_FOR_PAN.test($(Id).val()))
+    {
+        $(Id).css('border-color', 'red');
+
+    } else
+    {
+        $(Id).css('border-color', 'rgba(0,0,0,.3)');
+    }
+
+}
+
+function checkForName(Id)
+{
+    if (!REG_FOR_CNAME.test($(Id).val()))
+    {
+        $(Id).css('border-color', 'red');
+
+    } else
+    {
+        $(Id).css('border-color', 'rgba(0,0,0,.3)');
+    }
+
+}
+
+function checkForDate(Id)
+{
+    if (!REG_FOR_DATE.test($(Id).val()))
+    {
+        $(Id).css('border-color', 'red');
+
+    } else
+    {
+        $(Id).css('border-color', 'rgba(0,0,0,.3)');
+    }
+
+}
+
+function checkForTIN(Id)
+{
+    if (!REG_FOR_TIN.test($(Id).val()))
+    {
+        $(Id).css('border-color', 'red');
+
+    } else
+    {
+        $(Id).css('border-color', 'rgba(0,0,0,.3)');
+    }
+
 }
 
 function doClick(Id)

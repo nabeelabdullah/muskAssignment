@@ -130,9 +130,9 @@ and open the template in the editor.
                                 <div class="row" style="background-color: white;padding: 20px;height: max-content" >
                                     <div class="col-sm-6" style="background-color: white;" >
                                         <label> PAN Card </label>
-                                        <input type="text" id="pan" class="textB" placeholder="PAN No."/>
-                                        <input type="text" id="cname" class="textB" placeholder="Company Name."/>
-                                        <input type="text" id="date" class="textB" placeholder="Date Of Incorporation."/>
+                                        <input type="text" id="pan"  onblur="checkForPAN(this)"  onkeyup="checkForPAN(this)" class="textB" placeholder="PAN No."/>
+                                        <input type="text" id="cname" onblur="checkForName(this)" onkeyup="checkForName(this)" class="textB" placeholder="Company Name."/>
+                                        <input type="text" id="date"  onblur="checkForDate(this)"  onkeyup="checkForDate(this)" class="textB" placeholder="Date Of Incorporation."/>
 
 
                                     </div>
@@ -146,7 +146,7 @@ and open the template in the editor.
                                 <div class="row" style="background-color: white;padding: 20px;height: max-content;margin-top: 20px;" >
                                     <div class="col-sm-6" style="background-color: white;" >
                                         <label>TIN</label>
-                                        <input type="text"  class="textB" placeholder="TIN No."/>
+                                        <input type="text"  onblur="checkForTIN(this)"  onkeyup="checkForTIN(this)" class="textB" placeholder="TIN No."/>
 
                                     </div>
 
