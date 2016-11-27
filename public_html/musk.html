@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <script src="JS/bootstrap.js"></script>
+        <script src="JS/bootstrap.min.js" type="text/javascript"></script>
+        <script src="JS/jquery-3.1.1.min.js" type="text/javascript"></script>
+        <script src="JS/musk.js" type="text/javascript"></script>
+        <link href="css/bootstrap.css" type="text/css" rel="stylesheet"/>
+        <link href="css/bootstrap.min.css" type="text/css" rel="stylesheet"/>
+        <script src="JS/bootstrap-datepicker.js"></script>
+        <link href="css/bootstrap-datepicker.css" type="text/css" rel="stylesheet"/>
+        <link href="css/musk.css" type="text/css" rel="stylesheet"/>
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+        <script src="https://www.dropbox.com/static/api/dropbox-datastores-1.2-latest.js" type="text/javascript"></script>
+    </head>
+    <body onresize="widthArrahge()" onload="load();" onclick="bodyClick();">
+        <input type="file" style="display: none" onchange="clickToUpload()" id="textFile">
+        <div  class="mydropDown " id="lgsB">
+        </div>
+        <div id='trD' style="height: 100vh;width: 100%;background-color: rgba(255,255,255,.5);display: none;position: fixed;;z-index: 5">
+            <img src="img/rolling.gif" style="height: 20px ;width: 20px;margin-top: calc(100vh/2 - 10px);" class="center-block" />
+        </div>
+        <div class="container-fluid">
+            <div class="row" >
+                <div class="withcol hidden-sm hidden-xs" id='silderM' style="">
+                    <div class="col-sm-12 leftHeader">
+                        <h4><strong>MUSK</strong></h4>
+                    </div>
+                    <div class="col-sm-12 leftbody">
+                        <div class="row" style="padding: 20px" >
+                            <button class="text-center disabledButton">
+                                <strong>  ADMIN</strong>
+                            </button>
+                        </div>
+                        <div class="row" style="font-size: 15px;padding-top: 20px;" >
+                            <div class="col-sm-12 pad20" >
+                                <img src="img/Home-25.png" class="img" >
+                                Home
+
+                            </div>
+                            <div class="col-sm-12 pad20" >
+                                <img src="img/Check Book-25.png" class="img" >
+                                Anchors
+
+                            </div> <div class="col-sm-12 pad20" style="background-color: #24272D">
+                                <img src="img/Conference Call Filled-25.png" class="img" >
+                                Suppliers
+
+                            </div> <div class="col-sm-12 pad20" >
+                                <img src="img/Document-25 (1).png" class="img" >
+                                Profile
+
+                            </div> 
+                        </div>
+                    </div>
+                </div>
+                <div class="width-fill">
+
+                    <div class="col-sm-12 rightheader" >
+                        <div class="col-xs-10 col-sm-8" >
+                            <button style="background-color: white;margin-top: 2px;" class="my-toggle  visible-sm visible-xs btn" onclick="doClick(this)" data-target='#silderM'>
+
+                                <span class="glyphicon glyphicon-menu-hamburger"></span>
+
+                            </button>
+                            <h5 style="color: #696969;"><strong>Supplier <span class="glyphicon glyphicon glyphicon-chevron-right"></span> Onboarding</strong></h5>
+
+
+                        </div>
+
+                        <div id="bGLS" class="col-sm-4 hidden-xs" style="padding: 0;">
+                            <button class="sanlgB">
+                                <span class="glyphicon glyphicon-log-out"></span> <strong>LogOut</strong>
+
+                            </button>
+                            <button class="sanlgB">
+
+                                <span class="glyphicon glyphicon-flash"></span>   <strong>  Support</strong>
+                            </button>
+                        </div>
+                        <div class="col-xs-2 visible-xs" style="padding: 0;">
+                            <button class="sanlgB" onclick="setTimeout(function () {
+                                        $('#lgsB').toggle()
+                                    }, 50);" >
+                                <span class="glyphicon glyphicon-option-vertical"></span>
+
+                            </button>
+
+                        </div>
+
+
+                    </div>
+
+
+                    <div class="col-sm-12 rightbody">
+
+                        <div class="row"  >
+                            <div class="col-md-10 col-md-offset-1" style=" padding: 40px;padding-top:  20px; height: auto;background-color: #EDEDED;margin-top: 30px;">
+                                <div class="row" style="height: 50px;">
+                                    <table style="width: 100%;" >
+                                        <tr>
+                                            <td style="text-align: left">
+                                                <strong>  KYC Company</strong>
+                                            </td>
+                                            <td style="text-align: right">
+                                                <span class="glyphicon glyphicon-minus"></span>
+                                            </td>
+                                        </tr>
+                                    </table>
+
+                                </div>
+                                <div class="row" style="background-color: white;padding: 20px;height: max-content" >
+                                    <div class="col-sm-6" style="background-color: white;" >
+                                        <label> PAN Card </label>
+                                        <input type="text" id="pan" class="textB" placeholder="PAN No."/>
+                                        <input type="text" id="cname" class="textB" placeholder="Company Name."/>
+                                        <input type="text" id="date" class="textB" placeholder="Date Of Incorporation."/>
+
+
+                                    </div>
+                                    <div class="col-sm-6" ondragleave="exitDrop(this,event)" ondragover='allowDrop(this,event);'  ondrop='doDrop(this, event)' id='dropButtonC' style=";border-left: 1px black dashed ;font-size: 12px;;text-align: center;padding: 20px;padding-top: 60px;background-color: white;height: 170px;">
+
+                                        <button class="btn btn-give center-block" onclick="$('#textFile').click();" style="width: 100%;color: white;">UPLOAD</button>
+                                        <br/><span><strong>Or Drag and Drop file.</strong></span>
+                                    </div>
+                                </div>
+
+                                <div class="row" style="background-color: white;padding: 20px;height: max-content;margin-top: 20px;" >
+                                    <div class="col-sm-6" style="background-color: white;" >
+                                        <label>TIN</label>
+                                        <input type="text"  class="textB" placeholder="TIN No."/>
+
+                                    </div>
+
+                                </div>
+                                <div class="row" style="background-color: white;padding: 20px;height: max-content;margin-top: 20px;" >
+                                    <div class="col-sm-12" style="background-color: white;" >
+                                        <label>Address Proof</label>
+                                        <div class="row" style="margin-top: 15px;">
+                                            <div class="col-sm-4">
+                                                <input type="radio" name="optradio">&nbsp;Electricity Bill
+                                            </div>
+                                            <div class="col-sm-4">
+                                                <input type="radio" name="optradio">&nbsp;Water Bill
+                                            </div>
+                                            <div class="col-sm-4">
+                                                <input type="radio" name="optradio">&nbsp;Telephone Bill
+                                            </div>
+                                        </div>
+
+
+
+                                    </div>
+
+                                </div>
+
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </body>
+</html>
